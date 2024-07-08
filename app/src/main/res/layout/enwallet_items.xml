@@ -9,11 +9,13 @@
         android:id="@+id/rvBalanceText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="216dp"
+        android:layout_marginEnd="212dp"
         android:layout_marginBottom="12dp"
         android:text="BALANCE"
         app:layout_constraintBottom_toTopOf="@+id/rvBalanceNumber"
-        app:layout_constraintEnd_toStartOf="@+id/rvTransactions" />
+        app:layout_constraintEnd_toStartOf="@+id/rvTransactions"
+        app:layout_constraintTop_toTopOf="@+id/rvBalance"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/rvIncome"
@@ -73,7 +75,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/rvTransactions"
         app:layout_constraintEnd_toStartOf="@+id/rvBalanceText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/rvBalanceText"
+        app:layout_constraintTop_toTopOf="@+id/rvTransactions"
         app:srcCompat="@drawable/balance" />
 
     <ImageView
@@ -314,11 +316,10 @@
         android:id="@+id/rvElectricityDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="329dp"
         android:layout_marginBottom="67dp"
         android:text="5 July 2024"
         app:layout_constraintBottom_toTopOf="@+id/rvINternetDate"
-        app:layout_constraintStart_toEndOf="@+id/rvElectricityNumber" />
+        app:layout_constraintStart_toStartOf="@+id/rvDividendsDate" />
 
     <ImageView
         android:id="@+id/rvInternet"
@@ -356,116 +357,145 @@
 
     <TextView
         android:id="@+id/rvINternetDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="74dp"
+        android:layout_height="27dp"
         android:layout_marginEnd="202dp"
         android:text="5 July 2024"
         app:layout_constraintBottom_toBottomOf="@+id/rvInternet"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rvElectricityDate" />
 
     <ImageView
         android:id="@+id/rvShopping"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rvShoppingNumber"
+        app:layout_constraintEnd_toStartOf="@+id/rvShoppingText"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/expense_trx"
-        tools:layout_editor_absoluteY="944dp" />
+        app:layout_constraintTop_toTopOf="@+id/rvShoppingText"
+        app:srcCompat="@drawable/expense_trx" />
 
     <TextView
         android:id="@+id/rvShoppingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
         android:text="Shopping"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="944dp" />
+        app:layout_constraintStart_toEndOf="@+id/rvShopping"
+        app:layout_constraintTop_toBottomOf="@+id/rvInternetNumber" />
 
     <TextView
         android:id="@+id/rvShoppingNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginBottom="24dp"
         android:text="KES 3500"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="989dp" />
+        app:layout_constraintBottom_toTopOf="@+id/rvBusFareText"
+        app:layout_constraintStart_toEndOf="@+id/rvShopping"
+        app:layout_constraintTop_toBottomOf="@+id/rvShoppingText"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/rvShoppingDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
         android:text="5 July 2024"
-        tools:layout_editor_absoluteX="525dp"
-        tools:layout_editor_absoluteY="989dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/rvShopping"
+        app:layout_constraintStart_toStartOf="@+id/rvINternetDate"
+        app:layout_constraintTop_toBottomOf="@+id/rvINternetDate" />
 
     <ImageView
         android:id="@+id/rvBusFare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/expense_trx"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="1033dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/rvBusFareDate"
+        app:layout_constraintStart_toStartOf="@+id/rvShopping"
+        app:layout_constraintTop_toTopOf="@+id/rvBusFareText"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/expense_trx" />
 
     <TextView
         android:id="@+id/rvBusFareText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="604dp"
         android:text="Bus Fare"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="1033dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/rvBusFare"
+        app:layout_constraintTop_toBottomOf="@+id/rvShoppingNumber" />
 
     <TextView
         android:id="@+id/rvBusFareNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="20dp"
         android:text="KES 500"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="1078dp" />
+        app:layout_constraintBottom_toTopOf="@+id/rbWaterBillText"
+        app:layout_constraintStart_toStartOf="@+id/rvBusFareText"
+        app:layout_constraintTop_toBottomOf="@+id/rvBusFareText"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/rvBusFareDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="103dp"
+        android:layout_marginBottom="44dp"
         android:text="11 July 2024"
-        tools:layout_editor_absoluteX="525dp"
-        tools:layout_editor_absoluteY="1059dp" />
+        app:layout_constraintBottom_toTopOf="@+id/rvWaterBillDate"
+        app:layout_constraintStart_toStartOf="@+id/rvShoppingDate"
+        app:layout_constraintTop_toBottomOf="@+id/rvShoppingDate" />
 
     <ImageView
         android:id="@+id/rvWaterBill"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/expense_trx"
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="1114dp" />
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rvWaterBillDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rbWaterBillText"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/expense_trx" />
 
     <TextView
         android:id="@+id/rbWaterBillText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="31dp"
         android:text="Water Bill"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="1117dp" />
-
-    <TextView
-        android:id="@+id/rvWaterBillNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="1152dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvBusFareNumber" />
 
     <TextView
         android:id="@+id/rvWaterBillNumero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="20dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="1144dp" />
+        app:layout_constraintStart_toEndOf="@+id/rvWaterBill"
+        app:layout_constraintTop_toBottomOf="@+id/rbWaterBillText" />
 
     <TextView
         android:id="@+id/rvWaterBillDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:text="11 July 2024"
-        tools:layout_editor_absoluteX="523dp"
-        tools:layout_editor_absoluteY="1122dp" />
+        app:layout_constraintStart_toStartOf="@+id/rvBusFareDate"
+        app:layout_constraintTop_toBottomOf="@+id/rvBusFareDate" />
 
     <TextView
         android:id="@+id/rvMoneyOutNumber"
